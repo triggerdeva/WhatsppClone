@@ -1,0 +1,41 @@
+Whatsapp cone 
+    Features 
+        there are groups, and if one is in a group he should receive the message.
+        there are also direct messages.
+
+    for frontend and all the views we will use react, and for backend we will use firebase.
+
+
+===============================
+
+amit is user,
+    he will go to the whatsapp clone website.
+    - we will promt the user to make a account 
+        what will you be required to learn to implement this features.
+            -** firebase authemtication : login , signup. [learn this]
+    what will you bild after learning this 
+
+    on the landing page there will be a sign up page after user signups and login 
+    he will be redirected to the main application page.
+
+        what will you required to implement this?
+            -** learn react router dom... 
+
+
+=======================================
+
+
+main page:
+
+    2 sections 
+
+left section will have the users anr the right section will have the chatbox.
+
+-** how firebase firestore database works, how to work with it in real time.
+-** nosql document based database,  
+
+
+==========================
+
+
+         
