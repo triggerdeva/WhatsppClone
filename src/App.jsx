@@ -1,12 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Signin from './components/Signin';
+import React from 'react'
+import Main from './Components/Main';
+//import Signin from './components/Signin';
 
 
 
 function App() {
   
   return (
-   <Signin/>
+    <div>
+   {/*<Signin/>*/}
+   <Main/>
+   </div>
   );
 }
 

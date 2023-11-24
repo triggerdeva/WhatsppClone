@@ -7,16 +7,37 @@ import Whatsapp from "../assets/WhatsApp.png";
 import { Button, Card, CardContent } from "@mui/material";
 import google from "../assets/Google.png";
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../firebase/setup";
+import { auth, database, googleProvider } from "../firebase/setup";
+import { setDoc, doc } from "firebase/firestore";
 
 function Signin() {
+
+
+
+    const addUser = async() => {
+        const userDoc = doc(database , "Users" ,`${auth.currentUser?.uid}`)
+        try {
+            await setDoc(userDoc ,{
+                id:auth.currentUser?.uid,
+                username:auth.currentUser?.displayName,
+                profile_image:auth.currentUser?.photoURL
+            })
+        } catch(error){
+            console.log(error)
+        }
+    }
+
+
   const googleSignIn = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
+      addUser()
     } catch (error) {
       console.log(error);
     }
-  };
+  }
+
+  console.log(auth)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
